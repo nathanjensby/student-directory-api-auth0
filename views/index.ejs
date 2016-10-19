@@ -3,9 +3,26 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.auth0.com/js/lock/10.4/lock.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="js/script.js" charset="utf-8"></script>
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+    <form id="add-student" style="display:none">
+      <input type="text" id="student-first-name" placeholder="First Name">
+      <input type="text" id="student-last-name" placeholder="Last Name">
+      <input type="submit" value="Add New Student">
+    </form>
+    <ul id="studentList">
+
+    </ul>
+
+    <button type="button" id="btn-login">Login Here</button>
+
+    <button type="button" id="btn-logout" style="display:none">Logout</button>
   </body>
 </html>
